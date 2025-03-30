@@ -86,6 +86,7 @@ async function saveToExcel(data: MemberData) {
       // Try to read existing file
       workbook = XLSX.readFile(filePath)
     } catch (error) {
+      console.error("An error occurred:", error);
       // If file doesn't exist, create a new workbook
       workbook = XLSX.utils.book_new()
       XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet([]), "Members")
