@@ -110,12 +110,6 @@ export default function RegisterPage() {
     setFormStep((prev) => prev - 1)
   }
 
-  // Function to download sample Excel file
-  const downloadExcelTemplate = () => {
-    // In a real application, you would provide a link to download the Excel template
-    console.log("Downloading Excel template")
-    // This would be replaced with actual download functionality
-  }
 
   return (
     <div className="flex min-h-screen flex-col">
