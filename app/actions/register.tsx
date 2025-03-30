@@ -5,6 +5,21 @@ import { join } from "path"
 import * as XLSX from "xlsx"
 import nodemailer from "nodemailer"
 
+type MemberData = {
+  name: string;
+  email: string;
+  phone: string;
+  year: string;
+  department: string;
+  paymentMethod: string;
+  transactionId: string;
+  interest: string;
+  experience: string;
+  expectations: string;
+  paymentProofPath?: string;
+  registrationDate: string;
+}
+
 export async function registerMember(formData: FormData) {
   try {
     // Extract form data
@@ -62,7 +77,7 @@ export async function registerMember(formData: FormData) {
   }
 }
 
-async function saveToExcel(data: any) {
+async function saveToExcel(data: MemberData) {
   try {
     const filePath = join(process.cwd(), "data", "members.xlsx")
     let workbook
@@ -96,7 +111,7 @@ async function saveToExcel(data: any) {
   }
 }
 
-async function sendEmailNotification(data: any) {
+async function sendEmailNotification(data: MemberData) {
   // Create a test account if needed
   // const testAccount = await nodemailer.createTestAccount()
 
