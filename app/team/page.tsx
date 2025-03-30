@@ -222,7 +222,7 @@ export default function TeamPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Join Our Team</h2>
                 <p className="max-w-[600px] text-muted-foreground">
-                  Interested in becoming a part of JARC? We're always looking for passionate individuals to join our
+                  Interested in becoming a part of JARC? We are always looking for passionate individuals to join our
                   team.
                 </p>
               </div>
